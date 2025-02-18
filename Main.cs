@@ -31,7 +31,9 @@ public class Main : Game
     Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
 
     // TODO: use this.Content to load your game content here
-    
+
+    Globals.keyboard = new McKeyboard();
+
     world = new World();
   }
 
@@ -49,7 +51,12 @@ public class Main : Game
       Exit();
 
     // TODO: Add your update logic here
+    
+    Globals.keyboard.Update();
+
     world.Update();
+    
+    Globals.keyboard.UpdateOld();
 
     base.Update(gameTime);
   }
