@@ -9,6 +9,8 @@ public class Main : Game
   private GraphicsDeviceManager _graphics;
   private SpriteBatch _spriteBatch;
 
+  World world;
+
   public Main()
   {
     _graphics = new GraphicsDeviceManager(this);
@@ -29,6 +31,8 @@ public class Main : Game
     Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
 
     // TODO: use this.Content to load your game content here
+    
+    world = new World();
   }
 
   protected override void UnloadContent()
@@ -45,6 +49,7 @@ public class Main : Game
       Exit();
 
     // TODO: Add your update logic here
+    world.Update();
 
     base.Update(gameTime);
   }
@@ -56,7 +61,8 @@ public class Main : Game
     // TODO: Add your drawing code here
 
     Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
-
+  
+    world.Draw();
 
     Globals.spriteBatch.End();
 
