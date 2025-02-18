@@ -18,7 +18,7 @@ namespace TopDownShooter;
 public class Basic2d
 {
   public Vector2 pos,
-      dims;
+         dims;
 
   public Texture2D myModel;
 
@@ -45,7 +45,7 @@ public class Basic2d
           new Vector2(myModel.Bounds.Width / 2, myModel.Bounds.Height / 2),
           new SpriteEffects(),
           0
-      );
+          );
     }
   }
 }
