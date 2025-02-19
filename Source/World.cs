@@ -29,8 +29,8 @@ public class World
     hero.Update();
   }
 
-  public virtual void Draw()
+  public virtual void Draw(Vector2 Offset)
   {
-    hero.Draw();
+    hero.Draw(Offset);
   }
 }

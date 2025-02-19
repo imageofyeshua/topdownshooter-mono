@@ -41,9 +41,9 @@ public class Hero : Basic2d
       }
     }
 
-    public override void Draw()
+    public override void Draw(Vector2 Offset)
     {
-        base.Draw();
+        base.Draw(Offset);
     }
 
 }
